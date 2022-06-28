@@ -9,13 +9,11 @@ int p(int m){
   works = 0;
   people = 1;
   for(i = 0; i < n; i++){
-    if(A[i] > m){
-      return 0;
-    }
     works += A[i];
+    people += ((A[i] - 1) / m) * k;
     if(works > m){
       works = A[i];
-      people += 1;
+      people ++;
     }
   }
   return people <= k;
